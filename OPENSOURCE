@@ -1,3 +1,4 @@
+--made by insanedude59#9329
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("Shampoo Simulator", "Synapse")
@@ -117,45 +118,8 @@ Section2:NewToggle("100K Egg", "Autofarms 100K Egg", function(value)
                 
                 workspace.Map.World1.Floor.PetEggs.Egg5.Remotes.Events.HatchEggRequest:FireServer(ohString1)
                     end
-                end)
-
-                Section3:NewButton("Island 1 TP", "Self Explanatory", function()
-                   
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-114, 1, -30)
-                        end)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                Section3:NewButton("Island 2 TP", "Self Explanatory", function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-99, 1, -29)
-         end
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                Section3:NewButton("Island 3 TP", "Self Explanatory", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84, 1, -28)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                Section3:NewButton("Island 4 TP", "Self Explanatory", function()
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-69, 1, -28)
-                end)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-                            Section3:NewButton("Island 5 TP", "Self Explanatory", function()
-                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 1, -28)
-                            end)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                        Section3:NewButton("Island 6 TP", "Self Explanatory", function()
-                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                Section3:NewButton("Island 7 TP", "Self Explanatory", function()
-                                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-                                            end
-                                        end
-                                    end
-                                end
-                            end
-                        end
-                    end
-                end)
-                Section3:NewButton("Unlock all islands", "Unlocks all island automatically", function()
+            end)
+            Section3:NewButton("Unlock all islands", "Unlocks all island automatically", function()
                     local stuff = {}
                     local workspace = game:GetService("Workspace"):GetDescendants()
                     for i = 1, #workspace do 
@@ -170,11 +134,45 @@ Section2:NewToggle("100K Egg", "Autofarms 100K Egg", function(value)
                         wait()
                     end
                 end)
+
+                Section3:NewButton("Island 1 TP", "Self Explanatory", function()
+                   
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-114, 1, -30)
+                        end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                Section3:NewButton("Island 2 TP", "Self Explanatory", function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-99, 1, -29)
+         end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                Section3:NewButton("Island 3 TP", "Self Explanatory", function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84, 1, -28)
+                end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                Section3:NewButton("Island 4 TP", "Self Explanatory", function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-69, 1, -28)
+                end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                            Section3:NewButton("Island 5 TP", "Self Explanatory", function()
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 1, -28)
+                            end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Section3:NewButton("Island 6 TP", "Self Explanatory", function()
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
+                                        end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                Section3:NewButton("Island 7 TP", "Self Explanatory", function()
+                                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
+                                                end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     
+                
                 
                 
                 wait(0.2)
 game.StarterGui:SetCore("SendNotification", {
-Title = "Credits"; -- the title 
-Text = "Made by insanedude59#9329, please credit me in the description of your video if you are showcasing my script. Thanks!"; -- what the text says 
-Duration = 7; -- how long the notification should in secounds
+Title = "Credits";  
+Text = "Made by insanedude59#9329, please credit me in the description of your video if you are showcasing my script. Thanks!"; 
+Duration = 7; 
 })
+
