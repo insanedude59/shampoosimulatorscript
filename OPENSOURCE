@@ -162,7 +162,7 @@ Section2:NewToggle("100K Egg", "Autofarms 100K Egg", function(value)
                                         end)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                 Section3:NewButton("Island 7 TP", "Self Explanatory", function()
-                                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
+                                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-24, 0, -27)
                                                 end)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
      
