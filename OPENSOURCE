@@ -1,0 +1,180 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Shampoo Simulator", "Synapse")
+
+local Autofarm = Window:NewTab("Autofarms")
+
+local AutoEgg = Window:NewTab("Auto Egg")
+
+
+local Teleport = Window:NewTab("Teleports")
+
+local Credits = Window:NewTab("Credits")
+Credits:NewSection("insanedude59#9329")
+
+local Section = Autofarm:NewSection("Autofarms")
+
+local Section2 = AutoEgg:NewSection("Eggs (You gotta be near them to hatch them, sorry)")
+
+local Section3 = Teleport:NewSection("Teleports")
+
+Section:NewToggle("Autofarm", "autofarm", function(value)
+auto = value
+
+while auto do wait()
+    local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+    game:service'VirtualUser':ClickButton1(Vector2.new())
+end
+    local bb=game:service'VirtualUser'
+    bb:CaptureController()
+    bb:ClickButton2(Vector2.new())
+end)
+Section:NewToggle("Auto Sell", "Auto Sells your Hair", function(value)
+sell = value
+while sell do wait()
+    game:GetService("Workspace").Map.World1.Floor.SellStation.Beacon.Toucher.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+    end
+    while sell == false do wait()
+        game:GetService("Workspace").Map.World1.Floor.SellStation.Beacon.Toucher.CFrame = CFrame.new(-174, 1, 15)
+    end
+end)
+
+Section:NewToggle("Auto Coins", "Automatically grabs coins around the map.", function(value)
+coin = value
+while coin do wait(0.2)
+for i,v in pairs(game.workspace:GetDescendants()) do
+    if v:IsA("MeshPart") and v.Name == "Coin" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+        end
+    end
+end
+end)
+Section:NewToggle("Auto Buy Shampoo", "Auto Buys Shampoo.", function(value)
+shampoo = value
+while shampoo do wait()
+local ohString1 = "buyAll"
+
+game:GetService("ReplicatedStorage").Remotes.Functions.BuyPointTool:InvokeServer(ohString1)
+    end
+end)
+
+Section:NewToggle("Auto Evolve Hair", "Only use this if you want to spend all of your coins on hair.", function(value)
+hair = value
+while hair do wait()
+    local ohString1 = "buyOne"
+    
+    game:GetService("ReplicatedStorage").Remotes.Functions.BuyPointLimit:InvokeServer(ohString1)
+    end
+end)
+
+Section:NewButton("Evolve Hair 1 Time", "Evolves the hair once, mainly used so you dont spend all your coins.", function()
+    local ohString1 = "buyOne"
+    
+    game:GetService("ReplicatedStorage").Remotes.Functions.BuyPointLimit:InvokeServer(ohString1)
+    end)
+
+Section2:NewToggle("1K Egg", "Autofarms 1K Egg", function(value)
+egg = value
+while egg do wait()
+local ohString1 = "open1"
+
+workspace.Map.World1.Floor.PetEggs.Egg1.Remotes.Events.HatchEggRequest:FireServer(ohString1)
+    end
+end)
+
+Section2:NewToggle("100K Egg", "Autofarms 100K Egg", function(value)
+    egg = value
+    while egg do wait()
+    local ohString1 = "open1"
+    
+    workspace.Map.World1.Floor.PetEggs.Egg2.Remotes.Events.HatchEggRequest:FireServer(ohString1)
+        end
+    end)
+
+    Section2:NewToggle("1M Egg", "Autofarms 1M Egg", function(value)
+        egg = value
+        while egg do wait()
+        local ohString1 = "open1"
+        
+        workspace.Map.World1.Floor.PetEggs.Egg3.Remotes.Events.HatchEggRequest:FireServer(ohString1)
+            end
+        end)
+
+        Section2:NewToggle("5M Egg", "Autofarms 5M Egg", function(value)
+            egg = value
+            while egg do wait()
+            local ohString1 = "open1"
+            
+            workspace.Map.World1.Floor.PetEggs.Egg4.Remotes.Events.HatchEggRequest:FireServer(ohString1)
+                end
+            end)
+
+            Section2:NewToggle("15M Egg", "Autofarms 15M Egg", function(value)
+                egg = value
+                while egg do wait()
+                local ohString1 = "open1"
+                
+                workspace.Map.World1.Floor.PetEggs.Egg5.Remotes.Events.HatchEggRequest:FireServer(ohString1)
+                    end
+                end)
+
+                Section3:NewButton("Island 1 TP", "Self Explanatory", function()
+                   
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-114, 1, -30)
+                        end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                Section3:NewButton("Island 2 TP", "Self Explanatory", function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-99, 1, -29)
+         end
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                Section3:NewButton("Island 3 TP", "Self Explanatory", function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-84, 1, -28)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                Section3:NewButton("Island 4 TP", "Self Explanatory", function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-69, 1, -28)
+                end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                            Section3:NewButton("Island 5 TP", "Self Explanatory", function()
+                            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55, 1, -28)
+                            end)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                        Section3:NewButton("Island 6 TP", "Self Explanatory", function()
+                                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                Section3:NewButton("Island 7 TP", "Self Explanatory", function()
+                                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-40, 1, -27)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end)
+                Section3:NewButton("Unlock all islands", "Unlocks all island automatically", function()
+                    local stuff = {}
+                    local workspace = game:GetService("Workspace"):GetDescendants()
+                    for i = 1, #workspace do 
+                        local v = workspace[i]
+                        if v.Name == "Toucher" and v:FindFirstChildOfClass("TouchTransmitter") then 
+                            table.insert(stuff,v)
+                        end
+                    end
+                    for i = 1, #stuff do 
+                        local v = stuff[i]
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.CFrame.Position + Vector3.new(0,0,0))
+                        wait()
+                    end
+                end)
+                
+                
+                wait(0.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Credits"; -- the title 
+Text = "Made by insanedude59#9329, please credit me in the description of your video if you are showcasing my script. Thanks!"; -- what the text says 
+Duration = 7; -- how long the notification should in secounds
+})
