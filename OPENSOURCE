@@ -45,7 +45,7 @@ Section:NewToggle("Auto Coins", "Automatically grabs coins around the map.", fun
 coin = value
 while coin do wait(0.2)
 for i,v in pairs(game.workspace:GetDescendants()) do
-    if v:IsA("MeshPart") and v.Name == "Coin" then
+    if v:IsA("MeshPart") and v.Name == "Coin" and v.Transparency ~= 1 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
         end
     end
@@ -164,15 +164,4 @@ Section2:NewToggle("100K Egg", "Autofarms 100K Egg", function(value)
                                                 Section3:NewButton("Island 7 TP", "Self Explanatory", function()
                                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-24, 0, -27)
                                                 end)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-     
-                
-                
-                
-                wait(0.2)
-game.StarterGui:SetCore("SendNotification", {
-Title = "Credits";  
-Text = "Made by insanedude59#9329, please credit me in the description of your video if you are showcasing my script. Thanks!"; 
-Duration = 7; 
-})
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
