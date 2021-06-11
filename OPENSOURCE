@@ -22,18 +22,18 @@ local Section3 = Teleport:NewSection("Teleports")
 Section:NewToggle("Autofarm", "autofarm", function(value)
 auto = value
 
-while auto do wait()
+while auto do wait(0.1)
     local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
     game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
-    game:service'VirtualUser':ClickButton1(Vector2.new())
+    game:GetService("VirtualUser"):ClickButton1(Vector2.new())
 end
-    local bb=game:service'VirtualUser'
-    bb:CaptureController()
-    bb:ClickButton2(Vector2.new())
+    local virtualuser = game:service'VirtualUser'
+    virtualuser:CaptureController()
+    virtualuser:ClickButton2(Vector2.new())
 end)
 Section:NewToggle("Auto Sell", "Auto Sells your Hair", function(value)
 sell = value
-while sell do wait()
+while sell do wait(0.1)
     game:GetService("Workspace").Map.World1.Floor.SellStation.Beacon.Toucher.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
     end
     while sell == false do wait()
@@ -53,7 +53,7 @@ end
 end)
 Section:NewToggle("Auto Buy Shampoo", "Auto Buys Shampoo.", function(value)
 shampoo = value
-while shampoo do wait()
+while shampoo do wait(0.1)
 local ohString1 = "buyAll"
 
 game:GetService("ReplicatedStorage").Remotes.Functions.BuyPointTool:InvokeServer(ohString1)
@@ -62,7 +62,7 @@ end)
 
 Section:NewToggle("Auto Evolve Hair", "Only use this if you want to spend all of your coins on hair.", function(value)
 hair = value
-while hair do wait()
+while hair do wait(0.1)
     local ohString1 = "buyOne"
     
     game:GetService("ReplicatedStorage").Remotes.Functions.BuyPointLimit:InvokeServer(ohString1)
