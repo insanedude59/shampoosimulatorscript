@@ -23,13 +23,8 @@ Section:NewToggle("Autofarm", "autofarm", function(value)
 auto = value
 
 while auto do wait(0.1)
-    local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
-    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
-    game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+game:GetService("Players").LocalPlayer.Backpack.Shampoo.Remotes.Events.RequestPoints:FireServer()
 end
-    local virtualuser = game:service'VirtualUser'
-    virtualuser:CaptureController()
-    virtualuser:ClickButton2(Vector2.new())
 end)
 Section:NewToggle("Auto Sell", "Auto Sells your Hair", function(value)
 sell = value
